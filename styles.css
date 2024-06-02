@@ -1,0 +1,192 @@
+/* General reset and box-sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Container styling for centering content */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+}
+
+/* Content styling for centering inner content */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Align post text to justify */
+.post p {
+    text-align: justify;
+}
+
+/* Header container for SVG and text */
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* SVG container styling */
+.svg-container {
+    width: 200px;
+    height: 200px;
+    margin-right: 40px;
+}
+
+.svg-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Text container styling within header */
+.header .text-container {
+    text-align: left;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: lighter;    /* Make the main heading bigger */
+}
+
+.header h2 {
+    margin: 5px 0 0;
+    font-size: 36px; /* Secondary heading size */
+}
+
+/* Links container styling */
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Link styling */
+.links-container a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Link hover effect */
+.links-container a:hover {
+    color: #fd9400;
+}
+
+/* Line styling */
+hr {
+    border: none;
+    border-top: 2px solid #000000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f0f0f0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+footer .heart {
+    color: red;
+}
+
+footer a {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px solid #000000;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+footer a:hover {
+    color: #fd9400;
+    border-bottom-color: #fd9400;
+}
+
+/* Styles for larger screens */
+@media (min-width: 601px) {
+    .links-container {
+        margin-right: -100px; /* Apply only to larger screens */
+    }
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 600px) {
+    .container {
+        max-width: 325px; /* Limit the width for mobile devices */
+        margin: auto; /* Center the content */
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .svg-container {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .header .text-container {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .header h1 {
+        margin-top: 20px;
+        font-size: 22px; /* Smaller size for mobile */
+    }
+
+    .header h2 {
+        font-size: 22px; /* Smaller size for mobile */
+    }
+
+    .links-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Add some space between the links */
+    }
+
+    .links-container a {
+        margin-bottom: 10px;
+        font-size: 22px; /* Smaller size for mobile */
+    }
+
+    hr {
+        display: none; /* Remove the horizontal line */
+    }
+}
